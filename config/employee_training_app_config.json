@@ -1,0 +1,23 @@
+{
+	"meta":{
+		"version": "v1",
+		"app_name": "Employee Training",
+		"log_prefix": "employee_training"
+	},
+	"database":{
+		"pool":{
+			"name": "emp_training_app_db_bool",
+			"size": 10,
+			"reset_session": true,
+			"use_pure": true
+		},
+		"connection":{
+			"config":{
+				"database": "employee_training",
+				"user": "employee_training_user",
+				"host": "127.0.0.1",
+				"port": 3306
+			}
+		}
+	}
+}

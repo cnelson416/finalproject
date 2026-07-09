@@ -1,0 +1,34 @@
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:28:47,530:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:28:47,530:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:36:30,911:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:36:30,911:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:36:30,912:Creating connection pool...
+ERROR:MySQLPersistenceWrapper:2026-07-08 23:36:33,012:_initialize_database_connection_pool: Problem creating connection pool: 2003: Can't connect to MySQL server on 'localhost:8889' (Errno 10061: No connection could be made because the target machine actively refused it)
+ERROR:MySQLPersistenceWrapper:2026-07-08 23:36:33,012:_initialize_database_connection_pool: Check DB cnfg:
+{"pool": {"name": "emp_training_app_db_bool", "size": 10, "reset_session": true, "use_pure": true}, "connection": {"config": {"database": "employee_training", "user": "employee_training_user", "host": "localhost", "port": 8889}}}
+ERROR:MySQLPersistenceWrapper:2026-07-08 23:36:33,014:Problem with select_all_employees(): 'NoneType' object has no attribute 'get_connection'
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:38:48,255:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:38:48,255:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:38:48,255:Creating connection pool...
+ERROR:MySQLPersistenceWrapper:2026-07-08 23:38:50,324:_initialize_database_connection_pool: Problem creating connection pool: 2003: Can't connect to MySQL server on 'localhost:8889' (Errno 10061: No connection could be made because the target machine actively refused it)
+ERROR:MySQLPersistenceWrapper:2026-07-08 23:38:50,324:_initialize_database_connection_pool: Check DB cnfg:
+{"pool": {"name": "emp_training_app_db_bool", "size": 10, "reset_session": true, "use_pure": true}, "connection": {"config": {"database": "employee_training", "user": "employee_training_user", "host": "localhost", "port": 8889}}}
+ERROR:MySQLPersistenceWrapper:2026-07-08 23:38:50,324:Problem with select_all_employees(): 'NoneType' object has no attribute 'get_connection'
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:40:44,318:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:40:44,318:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:40:44,318:Creating connection pool...
+ERROR:MySQLPersistenceWrapper:2026-07-08 23:40:46,392:_initialize_database_connection_pool: Problem creating connection pool: 2003: Can't connect to MySQL server on 'localhost:8889' (Errno 10061: No connection could be made because the target machine actively refused it)
+ERROR:MySQLPersistenceWrapper:2026-07-08 23:40:46,392:_initialize_database_connection_pool: Check DB cnfg:
+{"pool": {"name": "emp_training_app_db_bool", "size": 10, "reset_session": true, "use_pure": true}, "connection": {"config": {"database": "employee_training", "user": "employee_training_user", "host": "localhost", "port": 8889}}}
+ERROR:MySQLPersistenceWrapper:2026-07-08 23:40:46,392:Problem with select_all_employees(): 'NoneType' object has no attribute 'get_connection'
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:51:55,366:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:51:55,366:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:51:55,366:Creating connection pool...
+ERROR:MySQLPersistenceWrapper:2026-07-08 23:51:57,442:_initialize_database_connection_pool: Problem creating connection pool: 2003: Can't connect to MySQL server on 'localhost:8889' (Errno 10061: No connection could be made because the target machine actively refused it)
+ERROR:MySQLPersistenceWrapper:2026-07-08 23:51:57,442:_initialize_database_connection_pool: Check DB cnfg:
+{"pool": {"name": "emp_training_app_db_bool", "size": 10, "reset_session": true, "use_pure": true}, "connection": {"config": {"database": "employee_training", "user": "employee_training_user", "host": "localhost", "port": 8889}}}
+ERROR:MySQLPersistenceWrapper:2026-07-08 23:51:57,442:Problem with select_all_employees(): 'NoneType' object has no attribute 'get_connection'
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:57:14,549:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:57:14,549:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:57:14,549:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-08 23:57:14,926:_initialize_database_connection_pool: Connection pool successfully created!
