@@ -1,7 +1,7 @@
 /* *********************************************
-Create the grants_investigations database.
+Create the grants_investigators database.
 Drop the database if it already exists.
 ********************************************** */
 
-DROP DATABASE IF EXISTS `grants_investigations`;
-CREATE DATABASE IF NOT EXISTS `grants_investigations`;
+DROP DATABASE IF EXISTS `grants_investigators`;
+CREATE DATABASE IF NOT EXISTS `grants_investigators`;

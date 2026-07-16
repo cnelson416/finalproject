@@ -1,9 +1,9 @@
 /* *************************************************************
- Drop and Create the tables for the grants_investigations database.
+ Drop and Create the tables for the grants_investigators database.
 *************************************************************** */
 
 -- Switch to grants_investigations database
-USE `grants_investigations`
+USE `grants_investigators`
 
 -- ----------------------------
 -- Investigator TABLE
@@ -14,11 +14,9 @@ DROP TABLE IF EXISTS `investigators`;
 CREATE TABLE IF NOT EXISTS `investigators` (
     `id` int(11) NOT NULL,
     `first_name` varchar(25) NOT NULL,
-    `middle_name` varchar(25) NOT NULL,
     `last_name` varchar(25) NOT NULL,
-    `title` varchar(100) NOT NULL,
-    `email` varchar(150) NOT NULL,
-    `department` varchar(150) NOT NULL
+    `email` varchar(150) UNIQUE NOT NULL,
+    `institution` varchar(255) NOT NULL
 );
 
 -- Designate the `id` column as the primary key
@@ -38,8 +36,11 @@ DROP TABLE IF EXISTS `grants`;
 CREATE TABLE IF NOT EXISTS `grants` (
     `id` int(11) NOT NULL,
     `grant_name` varchar(100) NOT NULL,
-    `status` varchar(50) NOT NULL,
-    `funding_amount` int(9999999) NOT NULL
+    `grant_number` varchar(100) UNIQUE NOT NULL,
+    `funding_agency` varchar(155) NOT NULL,
+    `funding_amount` DECIMAL(12, 2) NOT NULL,
+    `start_date` DATE,
+    `end_date` DATE
 );
 
 -- Add primary key
@@ -59,9 +60,8 @@ DROP TABLE IF EXISTS `grant_investigator_xref`;
 CREATE TABLE `grant_investigator_xref` (
     `investigator_id` int(11) NOT NULL,
     `grant_id` int(11) NOT NULL,
-    `start_date` varchar(25) NOT NULL,
-    `end_date` varchar(25) NOT NULL,
-    `status` varchar(25) NOT NULL
+    `role` varchar(100) DEFAULT 'Co-Investigator',
+    `grant_percent` DECIMAL(5, 2) DEFAULT 0.00
 );
 
 -- Create indexes on employee_id and course_id columns
