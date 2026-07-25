@@ -33,8 +33,14 @@ class Employee():
         employee_dict['birthday'] = self.birthday
         employee_dict['gender'] = self.gender
         employee_dict['training'] = []
-
         for item in self.training:
             employee_dict['training'].append(item.__dict__)
-
         return json.dumps(employee_dict)
+
+    def is_valid(self)->bool:
+        valid = False
+        if len(self.first_name) > 0 and len(self.middle_name) > 0 \
+            and len(self.last_name) > 0 and len(str(self.birthday)) > 0 \
+            and len(self.gender) > 0:
+            valid = True
+        return valid

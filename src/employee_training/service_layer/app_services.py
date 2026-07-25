@@ -4,12 +4,13 @@ from employee_training.application_base import ApplicationBase
 from employee_training.persistence_layer.mysql_persistence_wrapper import MySQLPersistenceWrapper
 import json
 import inspect
+from employee_training.infrastructure_layer.employee import Employee
 from typing import List, Dict
 
 class AppServices(ApplicationBase):
     """AppServices Class Definition."""
     def __init__(self, config:dict)->None:
-        """Initializes object. """
+        """Initialize object."""
         self._config_dict = config
         self.META = config["meta"]
         super().__init__(subclass_name=self.__class__.__name__, 
@@ -17,7 +18,7 @@ class AppServices(ApplicationBase):
         self.DB = MySQLPersistenceWrapper(config)
 
     def get_all_employees_as_json(self)->str:
-        """Returns all employees as JSON string"""
+        """Return all employees as JSON string."""
         self._logger.log_debug(f'In {inspect.currentframe().f_code.co_name}()...')
         try:
             results = self.DB.select_all_employees()
@@ -25,3 +26,26 @@ class AppServices(ApplicationBase):
 
         except Exception as e:
             self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}') 
+
+    def get_all_employees(self)->List[Employee]:
+        """Return a list of employee objects."""
+        self._logger.log_debug(f'In {inspect.currentframe().f_code.co_name}()...')
+        employee_dict = {}
+        employee_dict['employees'] = []
+
+        try:
+            results = self.DB.select_all_employees()
+            return results
+
+        except Exception as e:
+            self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}')
+
+    def create_employee(self, employee:Employee)->Employee:
+        """Create a new employee in the database."""
+        self._logger.log_debug(f'In {inspect.currentframe().f_code.co_name}()...')
+        try:
+            results = self.DB.create_employee(employee)
+            return results
+
+        except Exception as e:
+            self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}')

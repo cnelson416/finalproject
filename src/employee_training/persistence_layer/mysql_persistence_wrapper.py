@@ -9,6 +9,7 @@ from typing import List
 from employee_training.infrastructure_layer.employee import Employee
 from employee_training.infrastructure_layer.training import Training
 from enum import Enum
+import sys
 
 class MySQLPersistenceWrapper(ApplicationBase):
 	"""Implements the MySQLPersistenceWrapper class."""
@@ -64,11 +65,18 @@ class MySQLPersistenceWrapper(ApplicationBase):
 			f"FROM courses, employee_training_xref " \
 			f"WHERE (employee_id = %s) AND (`courses`.id = course_id)"
 
+		self.INSERT_EMPLOYEE = \
+			f"INSERT INTO employees " \
+			f"(first_name, middle_name, last_name, gender, birthday) " \
+			f"values(%s, %s, %s, %s, %s)"
 
-
+		self.CHECK_FOR_PRIMARY_KEY_IN_EMPLOYEES_TABLE = \
+			f"SELECT id " \
+			f"FROM employees " \
+			f"WHERE id = %s"
 
 	# MySQLPersistenceWrapper Methods
-	def select_all_employees(self)->list:
+	def select_all_employees(self)->list[Employee]:
 		"""Returns a list of all employee rows."""
 		cursor = None
 		results = None
@@ -114,6 +122,13 @@ class MySQLPersistenceWrapper(ApplicationBase):
 	def select_all_training_for_employee_id(self, employee_id:int) \
 		->List[Training]:
 		"""Returns a list of training rows for employee id."""
+		if not isinstance(employee_id, int):
+			raise TypeError(f'Invalid employee_id argument type. Expected int.')
+		if (employee_id < 1) or (employee_id > sys.maxsize):
+			raise ValueError(f'employee_id out of range. ')
+		if not self._is_primary_key_in_employees_table(employee_id):
+			raise ValueError(f'employee_id not valid primary key.')
+
 		cursor = None
 		results = None
 		try:
@@ -130,7 +145,31 @@ class MySQLPersistenceWrapper(ApplicationBase):
 		except Exception as e:
 			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: {e}')
 
+	def create_employee(self, employee:Employee)->Employee:
+		"""Create a new record in the employees table."""
+		if not isinstance(employee, Employee):
+			raise TypeError(f'Invalie employee argument type. Expected Employee.')
+		if not employee.is_valid():
+			raise ValueError(f'employee object not populated.')
 
+		cursor = None
+		try:
+			connection = self._connection_pool.get_connection()
+			with connection:
+				cursor = connection.cursor()
+				with cursor:
+					cursor.execute(self.INSERT_EMPLOYEE,
+						([employee.first_name, employee.middle_name,
+						employee.last_name, employee.gender, employee.birthday]))
+					connection.commit()
+					self._logger.log_debug(f'Updated {cursor.rowcount} row.')
+					self._logger.log_debug(f'Last Row ID: {cursor.lastrowid}.')
+					employee.id = cursor.lastrowid
+
+			return employee
+
+		except Exception as e:
+			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: {e}')
 
 
 		##### Private Utility Methods #####
@@ -190,5 +229,23 @@ class MySQLPersistenceWrapper(ApplicationBase):
 				training_list.append(training)
 
 			return training_list
+		except Exception as e:
+			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: {e}')
+
+	def _is_primary_key_in_employees_table(self, id:int)->bool:
+		"""Verifies primary key exists in employees table."""
+		return_value = False
+		try:
+			connection = self._connection_pool.get_connection()
+			with connection:
+				cursor = connection.cursor()
+				with cursor:
+					cursor.execute(self.CHECK_FOR_PRIMARY_KEY_IN_EMPLOYEES_TABLE, \
+						([id]))
+					results = cursor.fetchall()
+					if results:
+						return_value = True
+			return return_value
+
 		except Exception as e:
 			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: {e}')

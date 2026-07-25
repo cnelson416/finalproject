@@ -1,9 +1,143 @@
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:03:45,601:__init__:It works!
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:03:45,602:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:03:45,602:Creating connection pool...
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:03:45,949:_initialize_database_connection_pool: Connection pool successfully created!
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:32:27,794:__init__:It works!
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:32:27,795:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:32:27,803:Creating connection pool...
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:32:28,154:_initialize_database_connection_pool: Connection pool successfully created!
-DEBUG:AppServices:2026-07-09 00:32:28,154:In get_all_employees_as_json()...
+DEBUG:AppServices:2026-07-25 15:42:51,498:In get_all_employees()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 15:42:51,502:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 15:42:51,505:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 15:55:01,314:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 15:55:01,314:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 15:55:01,323:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 15:55:01,368:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:08:25,327:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:08:25,327:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:08:25,327:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:08:25,374:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:10:14,418:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:10:14,418:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:10:14,418:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:10:14,467:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 16:10:24,437:In get_all_employees()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:10:24,439:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:10:24,441:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:10:57,727:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:10:57,727:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:10:57,727:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:10:57,776:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 16:11:00,789:In get_all_employees()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:11:00,792:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:11:00,794:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:12:00,625:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:12:00,625:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:12:00,625:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:12:00,677:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 16:12:01,781:In get_all_employees()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:12:01,783:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:12:01,786:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:22:49,545:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:22:49,545:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:22:49,546:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:22:49,610:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 16:23:05,698:In create_employee()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:23:05,703:Updated 1 row.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:23:05,703:Last Row ID: 3.
+DEBUG:AppServices:2026-07-25 16:23:16,269:In get_all_employees()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:23:16,273:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:23:16,276:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:23:16,279:select_all_employees: 							[]
+DEBUG:AppServices:2026-07-25 16:23:46,244:In get_all_employees()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:23:46,246:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:23:46,249:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:23:46,250:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:25:47,992:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:25:47,992:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:25:47,992:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:25:48,043:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 16:25:49,916:In get_all_employees()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:25:49,919:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:25:49,920:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:25:49,922:select_all_employees: 							[]
+DEBUG:AppServices:2026-07-25 16:26:22,348:In create_employee()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:26:22,370:Updated 1 row.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:26:22,370:Last Row ID: 4.
+DEBUG:AppServices:2026-07-25 16:26:28,157:In get_all_employees()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:26:28,160:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:26:28,163:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:26:28,165:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:26:28,167:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:40:06,505:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:40:06,505:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:40:06,505:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:40:06,713:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:40:06,716:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:40:06,734:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:40:06,760:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:40:06,765:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:42:43,325:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:42:43,326:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:42:43,326:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:42:43,370:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:42:43,372:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:42:43,374:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:42:43,376:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:42:43,377:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:42:43,410:Updated 1 row.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:42:43,410:Last Row ID: 5.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:44:43,096:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:44:43,096:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:44:43,096:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:44:43,141:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:44:43,146:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:44:43,147:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:44:43,148:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:44:43,149:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:44:43,150:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:44:43,165:Updated 1 row.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:44:43,165:Last Row ID: 6.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:28,423:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:28,423:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:28,423:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:28,469:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:28,472:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:28,473:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:28,474:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:28,475:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:28,477:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:28,489:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:28,507:Updated 1 row.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:28,507:Last Row ID: 7.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:54,366:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:54,366:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:54,366:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:45:54,420:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:51:13,455:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:51:13,455:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:51:13,455:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:51:13,495:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:51:13,499:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:51:13,500:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:51:13,534:Updated 1 row.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:51:13,534:Last Row ID: 3.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:55:03,963:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:55:03,963:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:55:03,963:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 16:55:04,028:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:05:11,779:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:05:11,780:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:05:11,780:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:05:11,828:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:05:11,832:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:05:11,834:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:05:11,835:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:05:11,870:Updated 1 row.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:05:11,871:Last Row ID: 4.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:05:11,885:Updated 1 row.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:05:11,885:Last Row ID: 5.
+ERROR:MySQLPersistenceWrapper:2026-07-25 17:05:11,889:create_employee: 'NoneType' object has no attribute 'first_name'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:23:17,610:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:23:17,610:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:23:17,610:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:23:17,673:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:23:17,677:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:23:17,681:select_all_employees: 							[('Intro to Bash Shell Scripting', 'How to script the Bash shell.', '2025-09-15 00:00:00', '2025-09-20 00:00:00', 'Pass')]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:23:17,685:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:23:17,687:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:23:17,688:select_all_employees: 							[]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:23:17,714:Updated 1 row.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 17:23:17,714:Last Row ID: 6.

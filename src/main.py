@@ -5,6 +5,7 @@ from argparse import ArgumentParser
 #from employee_training.presentation_layer.user_interface import UserInterface
 #from employee_training.persistence_layer.mysql_persistence_wrapper import MySQLPersistenceWrapper
 from employee_training.service_layer.app_services import AppServices
+from employee_training.presentation_layer.console_ui import ConsoleUI
 
 def main():
 	"""Entry point."""
@@ -15,12 +16,8 @@ def main():
 		with open(args.configfile, 'r') as f:
 			config = json.loads(f.read())
 
-		service_layer = AppServices(config)
-		employees_list = service_layer.get_all_employees_as_json()
-		print(employees_list)
-
-#	ui = UserInterface(config)
-#	ui.start()
+		ui = ConsoleUI(config)
+		ui.start()
 			
 		
 
