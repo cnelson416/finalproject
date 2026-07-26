@@ -30,9 +30,10 @@ class ConsoleUI(ApplicationBase):
         print(f"\t1. List Investigators")
         print(f"\t2. List Grants")
         print(f"\t3. Add Investigator")
-        print(f"\t4. Record Investigator Grants")
-        print(f"\t5. Add Grant")
-        print(f"\t6. Exit")
+        print(f"\t4. Add Grant")
+        print(f"\t5. Connect Investigator to Grant")
+        print(f"\t6. Remove Investigator from Grant")
+        print(f"\t7. Exit")
         print()
 
     def process_menu_choice(self)->None:
@@ -42,9 +43,10 @@ class ConsoleUI(ApplicationBase):
             case '1': self.list_investigators()
             case '2': self.list_grants()
             case '3': self.add_investigator()
-            case '4': self.record_investigator_grants()
-            case '5': self.add_grant()
-            case '6': sys.exit()
+            case '4': self.add_grant()
+            case '5': self.connect_investigator_grant()
+            case '6': self.remove_investigator_grant()
+            case '7': sys.exit()
             case _: print(f"Invalid Menu Choice {menu_choice[0]}")
 
     def list_investigators(self) -> None:
@@ -78,16 +80,16 @@ class ConsoleUI(ApplicationBase):
         """List grants."""
         grants = self.app_services.get_all_grants()
         grants_table = PrettyTable()
-        grants_table.field_names = ['id', 'Grant Name', 'Grant Number', 'Funding Agency', 'Funding Amount', 'Investigators']
+        grants_table.field_names = ['id', 'Grant Name', 'Grant Number', 'Funding Agency', 'Funding Amount', 'Start Date', 'End Date', 'Investigators']
         
         investigators_table = PrettyTable()
         investigators_table.field_names = ['First Name', 'Last Name', 'Email']
         investigators_table.align = 'l'
         
-        for grant in grants:
+        for grant in grants:           
             for investigator in grant.investigators:
                 investigators_table.add_row([investigator.first_name, investigator.last_name, investigator.email])
-                
+            
             grants_table.add_row([
                 grant.id, 
                 grant.grant_name, 
@@ -119,10 +121,6 @@ class ConsoleUI(ApplicationBase):
             self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: ' \
                                 f'{e}')
 
-    def record_investigator_grant(self)->None:
-        """Record investigator grant."""
-        print("record_investigator_grant() method stub called...")
-
     def add_grant(self)->None:
         """Add grant."""
         print("\n\tAdd Grant...")
@@ -142,6 +140,36 @@ class ConsoleUI(ApplicationBase):
         except Exception as e:
             self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: ' \
                                 f'{e}')    
+
+    def connect_investigator_grant(self)->None:
+        """Connect investigator to grant."""
+        self.list_investigators()
+        try:
+            investigator_id = int(input('Investigator ID: '))
+            self.list_grants()
+            grant_id = int(input('Grant ID: '))
+            self.app_services.connect_investigator_to_grant(investigator_id=investigator_id,grant_id=grant_id)
+            print(f'Connected investigator {investigator_id} to grant {grant_id}.')
+
+        except Exception as e:
+            self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: ' \
+                                        f'{e}')
+
+    def remove_investigator_grant(self)->None:
+        """Remove investigator from grant."""
+        self.list_investigators()
+        try:
+            investigator_id = int(input('Investigator id: '))
+            self.list_grants()
+            grant_id = int(input('Grant id: '))
+            self.app_services.remove_investigator_from_grant(
+                investigator_id=investigator_id, grant_id=grant_id)
+            print(f'Removed investigator {investigator_id} from grant {grant_id}.')
+
+        except Exception as e:
+            self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: ' \
+                                                f'{e}')
+
 
     def start(self)->None:
         while True:

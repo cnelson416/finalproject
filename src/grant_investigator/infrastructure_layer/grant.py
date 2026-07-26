@@ -1,11 +1,13 @@
 """Contains the definition for the Grant class."""
 
 import json
+from typing import List
 
 class Grant():
     """Implements a Grant entity."""
 
     def __init__(self)->None:
+        from grant_investigator.infrastructure_layer.investigator import Investigator
         self.id:int = 0
         self.grant_name:str = ""
         self.grant_number:str = ""
@@ -13,6 +15,7 @@ class Grant():
         self.funding_amount:str = ""
         self.start_date:str = ""
         self.end_date:str = ""
+        self.investigators:"List[Investigator]" = []
 
     def __str__(self)->str:
         return self.to_json()

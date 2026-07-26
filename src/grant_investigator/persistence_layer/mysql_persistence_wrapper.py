@@ -44,9 +44,9 @@ class MySQLPersistenceWrapper(ApplicationBase):
 
 		# Grant Column ENUMS
 		self.GrantColumns = \
-			Enum('GrantColumns', [('grant_name', 0), ('grant_number', 1),
-				('funding_agency', 2), ('funding_amount', 3), ('start_date', 4),
-				('end_date', 5)])
+			Enum('GrantColumns', [('id', 0), ('grant_name', 1), ('grant_number', 2),
+				('funding_agency', 3), ('funding_amount', 4), ('start_date', 5),
+				('end_date', 6)])
 
 
 		# SQL String Constants
@@ -65,12 +65,12 @@ class MySQLPersistenceWrapper(ApplicationBase):
 			f"WHERE (`investigators`.id = investigator_id) AND (`grants`.id = grant_id)"
 
 		self.SELECT_GRANTS_FOR_INVESTIGATOR_ID = \
-			f"SELECT grant_name, grant_number, funding_agency, funding_amount, start_date, end_date " \
+			f"SELECT grants.id, grant_name, grant_number, funding_agency, funding_amount, start_date, end_date " \
 			f"FROM grants, grant_investigator_xref " \
 			f"WHERE (investigator_id = %s) AND (`grants`.id = grant_id)"
 
 		self.SELECT_INVESTIGATORS_FOR_GRANT_ID = \
-			f"SELECT first_name, last_name, email, institution " \
+			f"SELECT investigators.id, first_name, last_name, email, institution " \
 			f"FROM investigators, grant_investigator_xref " \
 			f"WHERE (grant_id = %s) AND (`investigators`.id = investigator_id)"
 
@@ -93,6 +93,14 @@ class MySQLPersistenceWrapper(ApplicationBase):
 			f"INSERT INTO grants " \
 			f"(grant_name, grant_number, funding_agency, funding_amount, start_date, end_date) " \
 			f"VALUES (%s, %s, %s, %s, %s, %s)"
+
+		self.INSERT_INVESTIGATOR_GRANT_XREF = \
+			f"INSERT INTO grant_investigator_xref (investigator_id, grant_id) " \
+			f"VALUES (%s, %s)"
+
+		self.DELETE_INVESTIGATOR_GRANT_XREF = \
+			f"DELETE FROM grant_investigator_xref " \
+			f"WHERE (investigator_id = %s) AND (grant_id = %s)"
 
 	# MySQLPersistenceWrapper Methods
 	def select_all_investigators(self)->list[Investigator]:
@@ -130,12 +138,12 @@ class MySQLPersistenceWrapper(ApplicationBase):
 					cursor.execute(self.SELECT_ALL_GRANTS)
 					results = cursor.fetchall()
 					grant_list = self._populate_grant_objects(results)
-
+					
 					for grant in grant_list:
 						investigator_list = self.select_all_investigators_with_grants_id(grant.id)
 						self._logger.log_debug(f'{inspect.currentframe().f_code.co_name}: {investigator_list}')
 						grant.investigators = self._populate_investigator_objects(investigator_list)
-
+					
 			return grant_list
 
 		except Exception as e:
@@ -274,6 +282,68 @@ class MySQLPersistenceWrapper(ApplicationBase):
 			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: {e}')
 
 
+	def insert_investigator_grant_xref(self, investigator_id:int, grant_id:int) -> None:
+		"""Insert a row connecting an investigator to a grant."""
+		if not isinstance(investigator_id, int):
+			raise TypeError(f'Invalid investigator_id argument type. Expected int.')
+		if not isinstance(grant_id, int):
+			raise TypeError(f'Invalid grant_id argument type. Expected int.')
+		if (investigator_id < 1) or (investigator_id > sys.maxsize):
+			raise ValueError(f'investigator_id out of range.')
+		if (grant_id < 1) or (grant_id > sys.maxsize):
+			raise ValueError(f'grant_id out of range.')
+		if not self._is_primary_key_in_investigators_table(investigator_id):
+			raise ValueError(f'investigator_id not valid primary key.')
+		if not self._is_primary_key_in_grants_table(grant_id):
+			raise ValueError(f'grant_id not valid primary key.')
+
+		cursor = None
+		try:
+			connection = self._connection_pool.get_connection()
+			with connection:
+				cursor = connection.cursor()
+				with cursor:
+					cursor.execute(self.INSERT_INVESTIGATOR_GRANT_XREF,
+						(investigator_id, grant_id))
+				connection.commit()
+
+		except Exception as e:
+			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: {e}')
+
+	def delete_investigator_grant_xref(self, investigator_id:int, grant_id:int) -> None:
+		"""Removes the row connecting an investigator to a grant."""
+		if not isinstance(investigator_id, int):
+			raise TypeError(f'Invalid investigator_id argument type. Expected int.')
+		if not isinstance(grant_id, int):
+			raise TypeError(f'Invalid grant_id argument type. Expected int.')
+		if (investigator_id < 1) or (investigator_id > sys.maxsize):
+			raise ValueError(f'investigator_id out of range.')
+		if (grant_id < 1) or (grant_id > sys.maxsize):
+			raise ValueError(f'grant_id out of range.')
+		if not self._is_primary_key_in_investigators_table(investigator_id):
+			raise ValueError(f'investigator_id not valid primary key.')
+		if not self._is_primary_key_in_grants_table(grant_id):
+			raise ValueError(f'grant_id not valid primary key.')
+
+		cursor = None
+		try:
+			connection = self._connection_pool.get_connection()
+			with connection:
+				cursor = connection.cursor()
+				with cursor:
+					cursor.execute(self.DELETE_INVESTIGATOR_GRANT_XREF,
+						(investigator_id, grant_id))
+					rows_affected = cursor.rowcount
+				connection.commit()
+
+			if rows_affected == 0:
+				self._logger.log_debug(
+					f'{inspect.currentframe().f_code.co_name}: '
+					f'no xref row found for investigator_id={investigator_id}, grant_id={grant_id}')
+
+		except Exception as e:
+			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: {e}')
+
 		##### Private Utility Methods #####
 
 	def _initialize_database_connection_pool(self, config:dict)->MySQLConnectionPool:
@@ -321,6 +391,7 @@ class MySQLPersistenceWrapper(ApplicationBase):
 		try:
 			for row in results:
 				grant = Grant()
+				grant.id = row[self.GrantColumns['id'].value]
 				grant.grant_name = row[self.GrantColumns['grant_name'].value]
 				grant.grant_number = row[self.GrantColumns['grant_number'].value]
 				grant.funding_agency = row[self.GrantColumns['funding_agency'].value]

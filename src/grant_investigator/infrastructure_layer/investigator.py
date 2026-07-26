@@ -1,8 +1,10 @@
 """Contains the definition for the Investigator class."""
 
 import json
-from grant_investigator.infrastructure_layer.grant import Grant
-from typing import List
+
+from typing import TYPE_CHECKING,List
+if TYPE_CHECKING:
+    from grant_investigator.infrastructure_layer.grant import Grant
 
 class Investigator():
     """Implement an Investigator entity."""
@@ -12,7 +14,7 @@ class Investigator():
         self.last_name:str = ""
         self.email:str = ""
         self.institution:str = ""
-        self.grants:List[Grant] = []
+        self.grants:"List[Grant]" = []
 
     def __str__(self)->str:
         return self.to_json()

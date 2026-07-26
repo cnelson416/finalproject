@@ -71,3 +71,23 @@ class AppServices(ApplicationBase):
         except Exception as e:
             self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}')
             raise
+
+    def connect_investigator_to_grant(self, investigator_id:int, grant_id:int) -> None:
+        """Connect an investigator to a grant."""
+        self._logger.log_debug(f'In {inspect.currentframe().f_code.co_name}()...')
+        try:
+            results = self.DB.insert_investigator_grant_xref(investigator_id, grant_id)
+            return results
+        
+        except Exception as e:
+            self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}')
+
+    def remove_investigator_from_grant(self, investigator_id:int, grant_id:int) -> None:
+        """Remove the connection between an investigator and a grant."""
+        self._logger.log_debug(f'In {inspect.currentframe().f_code.co_name}()...')
+        try:
+            results = self.DB.delete_investigator_grant_xref(investigator_id, grant_id)
+            return results
+
+        except Exception as e:
+            self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}')
