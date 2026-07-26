@@ -2,10 +2,10 @@
 
 import json
 from argparse import ArgumentParser
-#from employee_training.presentation_layer.user_interface import UserInterface
-#from employee_training.persistence_layer.mysql_persistence_wrapper import MySQLPersistenceWrapper
-from employee_training.service_layer.app_services import AppServices
-from employee_training.presentation_layer.console_ui import ConsoleUI
+from grant_investigator.presentation_layer.user_interface import UserInterface
+from grant_investigator.persistence_layer.mysql_persistence_wrapper import MySQLPersistenceWrapper
+from grant_investigator.service_layer.app_services import AppServices
+from grant_investigator.presentation_layer.console_ui import ConsoleUI
 
 def main():
 	"""Entry point."""
@@ -26,7 +26,7 @@ def configure_and_parse_commandline_arguments():
 	"""Configure and parse command-line arguments."""
 	parser = ArgumentParser(
 	prog='main.py',
-	description='Start the Employee Training application with a configuration file.',
+	description='Start the Grant Investigator application with a configuration file.',
 	epilog='POC: Chris Nelson | cnelson416@gmail.com')
 
 	parser.add_argument('-c','--configfile',

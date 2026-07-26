@@ -1,9 +1,0 @@
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:03:45,601:__init__:It works!
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:03:45,602:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:03:45,602:Creating connection pool...
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:03:45,949:_initialize_database_connection_pool: Connection pool successfully created!
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:32:27,794:__init__:It works!
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:32:27,795:__init__: DB Connection Config Dict: {'database': 'employee_training', 'user': 'employee_training_user', 'host': '127.0.0.1', 'port': 3306}
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:32:27,803:Creating connection pool...
-DEBUG:MySQLPersistenceWrapper:2026-07-09 00:32:28,154:_initialize_database_connection_pool: Connection pool successfully created!
-DEBUG:AppServices:2026-07-09 00:32:28,154:In get_all_employees_as_json()...

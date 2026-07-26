@@ -1,0 +1,23 @@
+{
+	"meta":{
+		"version": "v1",
+		"app_name": "Grant_Investigator",
+		"log_prefix": "grant_investigator"
+	},
+	"database":{
+		"pool":{
+			"name": "grant_investigator_app_db_bool",
+			"size": 10,
+			"reset_session": true,
+			"use_pure": true
+		},
+		"connection":{
+			"config":{
+				"database": "grant_investigator",
+				"user": "grant_investigator_user",
+				"host": "127.0.0.1",
+				"port": 3306
+			}
+		}
+	}
+}
