@@ -5,6 +5,7 @@ from grant_investigator.persistence_layer.mysql_persistence_wrapper import MySQL
 import json
 import inspect
 from grant_investigator.infrastructure_layer.investigator import Investigator
+from grant_investigator.infrastructure_layer.grant import Grant
 from typing import List, Dict
 
 class AppServices(ApplicationBase):
@@ -30,15 +31,24 @@ class AppServices(ApplicationBase):
     def get_all_investigators(self)->List[Investigator]:
         """Return a list of investigator objects."""
         self._logger.log_debug(f'In {inspect.currentframe().f_code.co_name}()...')
-        investigator_dict = {}
-        investigator_dict['investigators'] = []
-
         try:
             results = self.DB.select_all_investigators()
             return results
 
         except Exception as e:
             self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}')
+            raise
+
+    def get_all_grants(self)->List[Grant]:
+        """Return a list of grant objects."""
+        self._logger.log_debug(f'In {inspect.currentframe().f_code.co_name}()...')
+        try:
+            results = self.DB.select_all_grants()
+            return results
+
+        except Exception as e:
+            self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}')
+            raise
 
     def create_investigator(self, investigator:Investigator)->Investigator:
         """Create a new investigator in the database."""
@@ -49,3 +59,15 @@ class AppServices(ApplicationBase):
 
         except Exception as e:
             self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}')
+            raise
+
+    def create_grant(self, grant:Grant)->Grant:
+        """Create a new grant in the database."""
+        self._logger.log_debug(f'In {inspect.currentframe().f_code.co_name}()...')
+        try:
+            results = self.DB.create_grant(grant)
+            return results
+
+        except Exception as e:
+            self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}')
+            raise

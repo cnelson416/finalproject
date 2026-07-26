@@ -47,30 +47,61 @@ class ConsoleUI(ApplicationBase):
             case '6': sys.exit()
             case _: print(f"Invalid Menu Choice {menu_choice[0]}")
 
-    def list_investigators(self)->None:
+    def list_investigators(self) -> None:
         """List investigators."""
         investigators = self.app_services.get_all_investigators()
         investigators_table = PrettyTable()
-        investigators_table.field_names = ['id', 'First Name', 'Last Name',
-                                    'Email', 'Institution', 'Grants']
+        investigators_table.field_names = ['id', 'First Name', 'Last Name', 'Email', 'Institution', 'Grants']
+        
         grants_table = PrettyTable()
         grants_table.field_names = ['Grant Name', 'Funding Amount']
         grants_table.align = 'l'
+        
         for investigator in investigators:
             for grant in investigator.grants:
                 grants_table.add_row([grant.grant_name, grant.funding_amount])
-
-                investigators_table.add_row([investigator.id, investigator.first_name,
-                                    investigator.last_name, investigator.email,
-                                    investigator.institution, 
-                                    grants_table.get_string()])
-                investigators_table.add_divider()
-                grants_table.clear_rows()
+                
+            investigators_table.add_row([
+                investigator.id, 
+                investigator.first_name, 
+                investigator.last_name, 
+                investigator.email, 
+                investigator.institution, 
+                grants_table.get_string()
+            ])
+            investigators_table.add_divider()
+            grants_table.clear_rows()
+            
         print(investigators_table)
 
     def list_grants(self)->None:
         """List grants."""
-        print("list_grants() method stub called...")
+        grants = self.app_services.get_all_grants()
+        grants_table = PrettyTable()
+        grants_table.field_names = ['id', 'Grant Name', 'Grant Number', 'Funding Agency', 'Funding Amount', 'Investigators']
+        
+        investigators_table = PrettyTable()
+        investigators_table.field_names = ['First Name', 'Last Name', 'Email']
+        investigators_table.align = 'l'
+        
+        for grant in grants:
+            for investigator in grant.investigators:
+                investigators_table.add_row([investigator.first_name, investigator.last_name, investigator.email])
+                
+            grants_table.add_row([
+                grant.id, 
+                grant.grant_name, 
+                grant.grant_number, 
+                grant.funding_agency, 
+                grant.funding_amount, 
+                grant.start_date,
+                grant.end_date,
+                investigators_table.get_string()
+            ])
+            grants_table.add_divider()
+            investigators_table.clear_rows()
+            
+        print(grants_table)
 
     def add_investigator(self)->None:
         """Add investigator."""

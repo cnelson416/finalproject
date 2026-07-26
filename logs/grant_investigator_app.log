@@ -1,0 +1,290 @@
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:35:22,679:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:35:22,679:__init__: DB Connection Config Dict: {'database': 'grant_investigator', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:35:22,679:Creating connection pool...
+ERROR:MySQLPersistenceWrapper:2026-07-25 20:35:22,717:_initialize_database_connection_pool: Problem creating connection pool: 1049 (42000): Unknown database 'grant_investigator'
+ERROR:MySQLPersistenceWrapper:2026-07-25 20:35:22,717:_initialize_database_connection_pool: Check DB cnfg:
+{"pool": {"name": "grant_investigator_app_db_bool", "size": 10, "reset_session": true, "use_pure": true}, "connection": {"config": {"database": "grant_investigator", "user": "grant_investigator_user", "host": "127.0.0.1", "port": 3306}}}
+DEBUG:AppServices:2026-07-25 20:35:23,696:In get_all_investigators()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 20:35:23,697:select_all_investigators: 'NoneType' object has no attribute 'get_connection'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:37:40,928:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:37:40,928:__init__: DB Connection Config Dict: {'database': 'grant_investigator', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:37:40,928:Creating connection pool...
+ERROR:MySQLPersistenceWrapper:2026-07-25 20:37:40,965:_initialize_database_connection_pool: Problem creating connection pool: 1049 (42000): Unknown database 'grant_investigator'
+ERROR:MySQLPersistenceWrapper:2026-07-25 20:37:40,965:_initialize_database_connection_pool: Check DB cnfg:
+{"pool": {"name": "grant_investigator_app_db_bool", "size": 10, "reset_session": true, "use_pure": true}, "connection": {"config": {"database": "grant_investigator", "user": "grant_investigator_user", "host": "127.0.0.1", "port": 3306}}}
+DEBUG:AppServices:2026-07-25 20:37:43,273:In get_all_investigators()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 20:37:43,273:select_all_investigators: 'NoneType' object has no attribute 'get_connection'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:48:44,667:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:48:44,667:__init__: DB Connection Config Dict: {'database': 'grant_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:48:44,667:Creating connection pool...
+ERROR:MySQLPersistenceWrapper:2026-07-25 20:48:44,710:_initialize_database_connection_pool: Problem creating connection pool: 1049 (42000): Unknown database 'grant_investigators'
+ERROR:MySQLPersistenceWrapper:2026-07-25 20:48:44,711:_initialize_database_connection_pool: Check DB cnfg:
+{"pool": {"name": "grant_investigator_app_db_bool", "size": 10, "reset_session": true, "use_pure": true}, "connection": {"config": {"database": "grant_investigators", "user": "grant_investigator_user", "host": "127.0.0.1", "port": 3306}}}
+DEBUG:AppServices:2026-07-25 20:48:45,601:In get_all_investigators()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 20:48:45,601:select_all_investigators: 'NoneType' object has no attribute 'get_connection'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:49:46,944:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:49:46,944:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:49:46,944:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:49:46,981:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 20:49:47,681:In get_all_investigators()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 20:49:47,683:select_all_investigators: 1054 (42S22): Unknown column 'id' in 'field list'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:59:29,114:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:59:29,114:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:59:29,114:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 20:59:29,165:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 20:59:30,024:In get_all_investigators()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 20:59:30,025:select_all_investigators: 1054 (42S22): Unknown column 'id' in 'field list'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:09:16,524:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:09:16,524:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:09:16,524:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:09:16,574:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:09:17,129:In get_all_investigators()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 21:09:17,130:select_all_investigators: 1054 (42S22): Unknown column 'id' in 'field list'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:11:35,460:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:11:35,460:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:11:35,460:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:11:35,503:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:11:54,881:In create_investigator()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 21:11:54,884:create_investigator: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '('bob', 'norris', 'bnorris@123.com', 'The test university of testing')' at line 1
+ERROR:ConsoleUI:2026-07-25 21:11:54,884:add_investigator: 'NoneType' object has no attribute 'id'
+DEBUG:AppServices:2026-07-25 21:22:29,577:In get_all_investigators()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 21:22:29,578:select_all_investigators: 1054 (42S22): Unknown column 'id' in 'field list'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:25:17,961:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:25:17,961:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:25:17,961:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:25:18,023:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:25:18,825:In get_all_investigators()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 21:25:18,826:select_all_investigators: 1054 (42S22): Unknown column 'id' in 'field list'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:25:23,464:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:25:23,464:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:25:23,464:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:25:23,498:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:25:37,273:In create_investigator()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 21:25:37,276:create_investigator: Not all parameters were used in the SQL statement
+ERROR:ConsoleUI:2026-07-25 21:25:37,276:add_investigator: 'NoneType' object has no attribute 'id'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:29:19,892:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:29:19,892:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:29:19,892:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:29:19,930:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:29:27,873:In create_investigator()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 21:29:27,875:create_investigator: Not all parameters were used in the SQL statement
+ERROR:ConsoleUI:2026-07-25 21:29:27,875:add_investigator: 'NoneType' object has no attribute 'id'
+DEBUG:AppServices:2026-07-25 21:31:20,152:In create_investigator()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 21:31:20,154:create_investigator: Not all parameters were used in the SQL statement
+ERROR:ConsoleUI:2026-07-25 21:31:20,155:add_investigator: 'NoneType' object has no attribute 'id'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:31:39,323:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:31:39,323:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:31:39,323:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:31:39,366:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:31:42,008:In create_investigator()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 21:31:42,011:create_investigator: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(5, '3', '3', '3', '3')' at line 1
+ERROR:ConsoleUI:2026-07-25 21:31:42,011:add_investigator: 'NoneType' object has no attribute 'id'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:34:11,466:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:34:11,466:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:34:11,466:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:34:11,500:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:34:14,520:In create_investigator()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:36:51,851:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:36:51,851:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:36:51,851:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:36:51,896:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:37:00,704:In create_investigator()...
+DEBUG:AppServices:2026-07-25 21:37:10,337:In get_all_investigators()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 21:37:10,338:select_all_investigators: 1054 (42S22): Unknown column 'id' in 'field list'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:40:06,455:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:40:06,455:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:40:06,455:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:40:06,511:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:40:07,545:In get_all_investigators()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 21:40:07,547:select_all_investigators: 1054 (42S22): Unknown column 'id' in 'field list'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:42:22,600:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:42:22,600:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:42:22,600:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:42:22,645:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:42:23,192:In get_all_investigators()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 21:42:23,194:select_all_investigators: 1054 (42S22): Unknown column 'id' in 'field list'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:49:45,407:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:49:45,407:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:49:45,407:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:49:45,451:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:49:46,240:In get_all_investigators()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:49:46,256:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:49:46,258:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:49:46,261:select_all_investigators: [('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:49:46,263:select_all_investigators: [('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:51:56,496:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:51:56,496:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:51:56,496:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:51:56,544:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:52:00,008:In get_all_investigators()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:52:00,012:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:52:00,081:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:52:00,085:select_all_investigators: [('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:52:00,088:select_all_investigators: [('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:59:36,563:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:59:36,563:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:59:36,565:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 21:59:36,617:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 21:59:38,056:In get_all_investigators()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 21:59:38,060:select_all_investigators: Object of type Decimal is not JSON serializable
+ERROR:AppServices:2026-07-25 21:59:38,061:get_all_investigators:Object of type Decimal is not JSON serializable
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:00:48,978:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:00:48,979:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:00:48,979:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:00:49,027:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 22:00:49,672:In get_all_investigators()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:00:49,675:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:00:49,677:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:00:49,680:select_all_investigators: [('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:00:49,684:select_all_investigators: [('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:06:12,733:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:06:12,733:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:06:12,733:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:06:12,777:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 22:06:13,520:In get_all_investigators()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:06:13,524:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:06:13,527:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:06:13,529:select_all_investigators: [('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:06:13,532:select_all_investigators: [('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:AppServices:2026-07-25 22:06:40,968:In create_investigator()...
+DEBUG:AppServices:2026-07-25 22:06:45,376:In get_all_investigators()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:06:45,379:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:06:45,381:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:06:45,383:select_all_investigators: [('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:06:45,386:select_all_investigators: [('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:12,336:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:12,336:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:12,336:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:12,383:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 22:11:14,768:In create_investigator()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:14,784:Updated 1 row.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:14,784:Last Row ID: 6.
+DEBUG:AppServices:2026-07-25 22:11:17,224:In get_all_investigators()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:17,228:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:17,231:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:17,234:select_all_investigators: [('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:17,237:select_all_investigators: [('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:17,239:select_all_investigators: []
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:46,039:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:46,039:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:46,039:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:11:46,086:_initialize_database_connection_pool: Connection pool successfully created!
+ERROR:ConsoleUI:2026-07-25 22:11:51,175:add_grant: time data '5' does not match format '%m/%d/%Y'
+ERROR:ConsoleUI:2026-07-25 22:19:22,866:add_grant: 'AppServices' object has no attribute 'create_grant'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:21:06,356:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:21:06,356:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:21:06,356:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:21:06,409:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 22:21:27,680:In create_grant()...
+ERROR:AppServices:2026-07-25 22:21:27,680:create_grant:'Grant' object has no attribute 'is_valid'
+ERROR:ConsoleUI:2026-07-25 22:21:27,680:add_grant: 'Grant' object has no attribute 'is_valid'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:24:43,326:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:24:43,327:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:24:43,327:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:24:43,362:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 22:25:00,207:In create_grant()...
+ERROR:AppServices:2026-07-25 22:25:00,209:create_grant:object of type 'datetime.datetime' has no len()
+ERROR:ConsoleUI:2026-07-25 22:25:00,209:add_grant: object of type 'datetime.datetime' has no len()
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:25:44,407:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:25:44,407:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:25:44,407:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:25:44,456:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 22:25:59,769:In create_grant()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:25:59,790:Updated 1 row.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:25:59,790:Last Row ID: 4.
+DEBUG:AppServices:2026-07-25 22:26:30,976:In get_all_investigators()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:26:30,991:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:26:30,996:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:26:30,998:select_all_investigators: [('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:26:31,001:select_all_investigators: [('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:35:06,917:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:35:06,917:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:35:06,917:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:35:06,960:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:36:11,580:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:36:11,580:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:36:11,580:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:36:11,633:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 22:36:12,800:In get_all_grants()...
+ERROR:AppServices:2026-07-25 22:36:12,800:get_all_grants:'MySQLPersistenceWrapper' object has no attribute 'select_all_grants'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:43:59,769:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:43:59,770:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:43:59,770:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 22:43:59,823:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 22:44:00,800:In get_all_grants()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 22:44:00,802:select_all_grants: 'Grant' object has no attribute 'id'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:00:33,747:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:00:33,748:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:00:33,748:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:00:33,790:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 23:00:34,495:In get_all_grants()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 23:00:34,498:select_all_grants: 'Grant' object has no attribute 'id'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:04:19,734:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:04:19,735:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:04:19,735:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:04:19,773:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 23:04:20,776:In get_all_grants()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 23:04:20,778:select_all_grants: 'Grant' object has no attribute 'id'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:06:52,090:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:06:52,090:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:06:52,090:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:06:52,127:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 23:06:54,504:In get_all_investigators()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:06:54,508:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:06:54,511:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:06:54,514:select_all_investigators: [('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:06:54,516:select_all_investigators: [('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:AppServices:2026-07-25 23:06:55,719:In get_all_grants()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 23:06:55,721:select_all_grants: 'Grant' object has no attribute 'id'
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:09:53,826:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:09:53,826:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:09:53,826:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:09:53,874:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 23:09:54,439:In get_all_grants()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 23:09:54,442:select_all_grants: grant_id out of range. 
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:10:03,162:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:10:03,162:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:10:03,162:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:10:03,208:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 23:10:15,912:In create_grant()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:10:15,932:Updated 1 row.
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:10:15,933:Last Row ID: 5.
+DEBUG:AppServices:2026-07-25 23:10:30,128:In get_all_investigators()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:10:30,132:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:10:30,135:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:10:30,139:select_all_investigators: [('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:10:30,142:select_all_investigators: [('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:AppServices:2026-07-25 23:10:35,416:In get_all_grants()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 23:10:35,418:select_all_grants: grant_id out of range. 
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:12:06,299:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:12:06,300:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:12:06,300:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:12:06,344:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 23:12:07,000:In get_all_grants()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 23:12:07,001:select_all_grants: grant_id out of range. 
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:16:36,582:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:16:36,582:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:16:36,582:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:16:36,637:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 23:16:37,663:In get_all_grants()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 23:16:37,665:select_all_grants: grant_id out of range. 
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:27:59,582:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:27:59,582:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:27:59,583:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:27:59,618:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 23:28:00,191:In get_all_investigators()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:28:00,197:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:28:00,201:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:28:00,204:select_all_investigators: [('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:28:00,206:select_all_investigators: [('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:AppServices:2026-07-25 23:28:01,207:In get_all_grants()...
+ERROR:MySQLPersistenceWrapper:2026-07-25 23:28:01,210:select_all_grants: grant_id out of range. 
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:39:13,505:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:39:13,505:__init__: DB Connection Config Dict: {'database': 'grants_investigators', 'user': 'grant_investigator_user', 'host': '127.0.0.1', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:39:13,505:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:39:13,546:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2026-07-25 23:39:14,143:In get_all_investigators()...
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:39:14,148:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:39:14,151:select_all_investigators: [('Quantum Computing for Climate Modeling', 'NSF-2026-QC99', 'National Science Foundation', Decimal('1250000.00'), datetime.date(2026, 9, 1), datetime.date(2029, 8, 31)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:39:14,155:select_all_investigators: [('Deep Learning in Genomic Sequencing', 'NIH-R01-HG102', 'National Institutes of Health', Decimal('850000.00'), datetime.date(2026, 10, 15), datetime.date(2028, 10, 14)), ('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]
+DEBUG:MySQLPersistenceWrapper:2026-07-25 23:39:14,157:select_all_investigators: [('Urban Infrastructure Resilience Study', 'DOE-EERE-401', 'Department of Energy', Decimal('500000.00'), datetime.date(2027, 1, 1), datetime.date(2027, 12, 31))]

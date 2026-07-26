@@ -13,7 +13,7 @@
 		},
 		"connection":{
 			"config":{
-				"database": "grant_investigator",
+				"database": "grants_investigators",
 				"user": "grant_investigator_user",
 				"host": "127.0.0.1",
 				"port": 3306
