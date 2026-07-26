@@ -102,6 +102,18 @@ class MySQLPersistenceWrapper(ApplicationBase):
 			f"DELETE FROM grant_investigator_xref " \
 			f"WHERE (investigator_id = %s) AND (grant_id = %s)"
 
+		self.DELETE_INVESTIGATOR = \
+    		f"DELETE FROM investigators WHERE (id = %s)"
+
+		self.DELETE_INVESTIGATOR_GRANT_XREF_BY_INVESTIGATOR_ID = \
+			f"DELETE FROM grant_investigator_xref WHERE (investigator_id = %s)"
+
+		self.DELETE_GRANT = \
+    		f"DELETE FROM grants WHERE (id = %s)"
+
+		self.DELETE_INVESTIGATOR_GRANT_XREF_BY_GRANT_ID = \
+			f"DELETE FROM grant_investigator_xref WHERE (grant_id = %s)"
+
 	# MySQLPersistenceWrapper Methods
 	def select_all_investigators(self)->list[Investigator]:
 		"""Returns a list of all investigator rows."""
@@ -340,6 +352,56 @@ class MySQLPersistenceWrapper(ApplicationBase):
 				self._logger.log_debug(
 					f'{inspect.currentframe().f_code.co_name}: '
 					f'no xref row found for investigator_id={investigator_id}, grant_id={grant_id}')
+
+		except Exception as e:
+			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: {e}')
+
+	def delete_investigator(self, investigator_id:int) -> None:
+		"""Delete an investigator and their grant connections."""
+		if not isinstance(investigator_id, int):
+			raise TypeError(f'Invalid investigator_id argument type. Expected int.')
+		if (investigator_id < 1) or (investigator_id > sys.maxsize):
+			raise ValueError(f'investigator_id out of range.')
+		if not self._is_primary_key_in_investigators_table(investigator_id):
+			raise ValueError(f'investigator_id not valid primary key.')
+
+		cursor = None
+		try:
+			connection = self._connection_pool.get_connection()
+			with connection:
+				cursor = connection.cursor()
+				with cursor:
+					# Remove xref rows
+					cursor.execute(self.DELETE_INVESTIGATOR_GRANT_XREF_BY_INVESTIGATOR_ID,
+						([investigator_id]))
+					cursor.execute(self.DELETE_INVESTIGATOR,
+						([investigator_id]))
+				connection.commit()
+
+		except Exception as e:
+			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: {e}')
+
+	def delete_grant(self, grant_id:int) -> None:
+		"""Delete a grant and its investigator connections."""
+		if not isinstance(grant_id, int):
+			raise TypeError(f'Invalid grant_id argument type. Expected int.')
+		if (grant_id < 1) or (grant_id > sys.maxsize):
+			raise ValueError(f'grant_id out of range.')
+		if not self._is_primary_key_in_grants_table(grant_id):
+			raise ValueError(f'grant_id not valid primary key.')
+
+		cursor = None
+		try:
+			connection = self._connection_pool.get_connection()
+			with connection:
+				cursor = connection.cursor()
+				with cursor:
+					# Remove xref rows
+					cursor.execute(self.DELETE_INVESTIGATOR_GRANT_XREF_BY_GRANT_ID,
+						([grant_id]))
+					cursor.execute(self.DELETE_GRANT,
+						([grant_id]))
+				connection.commit()
 
 		except Exception as e:
 			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: {e}')

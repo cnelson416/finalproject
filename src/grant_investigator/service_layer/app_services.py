@@ -91,3 +91,23 @@ class AppServices(ApplicationBase):
 
         except Exception as e:
             self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}')
+
+    def delete_investigator(self, investigator_id:int) -> None:
+        """Delete an investigator."""
+        self._logger.log_debug(f'In {inspect.currentframe().f_code.co_name}()...')
+        try:
+            results = self.DB.delete_investigator(investigator_id)
+            return results
+        
+        except Exception as e:
+            self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}')
+
+    def delete_grant(self, grant_id:int) -> None:
+        """Delete a grant."""
+        self._logger.log_debug(f'In {inspect.currentframe().f_code.co_name}()...')
+        try:
+            results = self.DB.delete_grant(grant_id)
+            return results
+            
+        except Exception as e:
+            self._logger.log_error(f'{inspect.currentframe().f_code.co_name}:{e}')

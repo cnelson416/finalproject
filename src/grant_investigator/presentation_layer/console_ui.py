@@ -33,7 +33,9 @@ class ConsoleUI(ApplicationBase):
         print(f"\t4. Add Grant")
         print(f"\t5. Connect Investigator to Grant")
         print(f"\t6. Remove Investigator from Grant")
-        print(f"\t7. Exit")
+        print(f"\t7. Delete Investigator")
+        print(f"\t8. Delete Grant")
+        print(f"\t9. Exit")
         print()
 
     def process_menu_choice(self)->None:
@@ -46,7 +48,9 @@ class ConsoleUI(ApplicationBase):
             case '4': self.add_grant()
             case '5': self.connect_investigator_grant()
             case '6': self.remove_investigator_grant()
-            case '7': sys.exit()
+            case '7': self.delete_investigator()
+            case '8': self.delete_grant()
+            case '9': sys.exit()
             case _: print(f"Invalid Menu Choice {menu_choice[0]}")
 
     def list_investigators(self) -> None:
@@ -170,6 +174,29 @@ class ConsoleUI(ApplicationBase):
             self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: ' \
                                                 f'{e}')
 
+    def delete_investigator(self)->None:
+        """Delete investigator."""
+        self.list_investigators()
+        try:
+            investigator_id = int(input('Investigator id to delete: '))
+            self.app_services.delete_investigator(investigator_id)
+            print(f'Deleted investigator {investigator_id}.')
+
+        except Exception as e:
+            self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: ' \
+                                                        f'{e}')
+
+    def delete_grant(self)->None:
+        """Delete grant."""
+        self.list_grants()
+        try:
+            grant_id = int(input('Grant id to delete: '))
+            self.app_services.delete_grant(grant_id)
+            print(f'Deleted grant {grant_id}.')
+
+        except Exception as e:
+            self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: ' \
+                                                                f'{e}')
 
     def start(self)->None:
         while True:
